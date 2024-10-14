@@ -1,0 +1,126 @@
+{
+    "macchine": [
+      {
+        "marca": "Toyota",
+        "modello": "Yaris",
+        "anno": 2020,
+        "colore": "Bianco",
+        "tipo_carburante": "Benzina",
+        "cavalli": 75,  
+        "cambio": "Manuale",  
+        "targa": "EM502LA",  
+        "immagine_url": "https://www.example.com/toyota_corolla_2020.jpg"  
+      },
+      {
+        "marca": "Honda",
+        "modello": "Civic",
+        "anno": 2019,
+        "colore": "Nero",
+        "tipo_carburante": "Diesel",
+        "cavalli": 120,
+        "cambio": "Manuale",
+        "targa": "FB783UJ",
+        "immagine_url": "https://www.example.com/honda_civic_2019.jpg"
+      },
+      {
+        "marca": "Tesla",
+        "modello": "Model S",
+        "anno": 2021,
+        "colore": "Rosso",
+        "tipo_carburante": "Elettrico",
+        "cavalli": 670,
+        "cambio": "Automatico",
+        "targa": "CT529GT",
+        "immagine_url": "https://www.example.com/tesla_model_s_2021.jpg"
+      },
+      {
+        "marca": "Ford",
+        "modello": "Fiesta",
+        "anno": 2020,
+        "colore": "Nero",
+        "tipo_carburante": "Benzina",
+        "cavalli": 90,
+        "cambio": "Manuale",
+        "targa": "GA650AA",
+        "immagine_url": "https://www.example.com/ford_mustang_2018.jpg"
+      },
+      {
+        "marca": "BMW",
+        "modello": "X5",
+        "anno": 2022,
+        "colore": "Grigio",
+        "tipo_carburante": "Ibrido",
+        "cavalli": 394,
+        "cambio": "Automatico",
+        "targa": "BT826MI",
+        "immagine_url": "https://www.example.com/bmw_x5_2022.jpg"
+      },
+      {
+        "marca": "Audi",
+        "modello": "A4",
+        "anno": 2022,
+        "colore": "Blu",
+        "tipo_carburante": "Diesel",
+        "cavalli": 150,
+        "cambio": "Automatico",
+        "targa": "DR634UT",
+        "immagine_url": "https://www.example.com/audi_a4_2017.jpg"
+      },
+      {
+        "marca": "Mercedes-Benz",
+        "modello": "Classe C",
+        "anno": 2021,
+        "colore": "Argento",
+        "tipo_carburante": "Benzina",
+        "cavalli": 204,
+        "cambio": "Automatico",
+        "targa": "GE759FC",
+        "immagine_url": "https://www.example.com/mercedes_c_class_2021.jpg"
+      },
+      {
+        "marca": "Volkswagen",
+        "modello": "Golf",
+        "anno": 2020,
+        "colore": "Bianco",
+        "tipo_carburante": "Benzina",
+        "cavalli": 110,
+        "cambio": "Manuale",
+        "targa": "CR489HY",
+        "immagine_url": "https://www.example.com/volkswagen_golf_2020.jpg"
+      },
+      {
+        "marca": "Range Rover",
+        "modello": "Sport",
+        "anno": 2019,
+        "colore": "Grigio Scuro",
+        "tipo_carburante": "Ibrido",
+        "cavalli": 400,
+        "cambio": "Semi-Automatico",
+        "targa": "DH347IJ",
+        "immagine_url": "https://www.example.com/volvo_xc90_2019.jpg"
+      },
+      {
+        "marca": "Peugeot",
+        "modello": "208",
+        "anno": 2021,
+        "colore": "Verde",
+        "tipo_carburante": "Ibrido",
+        "cavalli": 95,
+        "cambio": "Manuale",
+        "targa": "FC458GT",
+        "immagine_url": "https://www.example.com/peugeot_208_2021.jpg"
+      },
+      {
+        "marca": "Porsche",
+        "modello": "911",
+        "anno": 2024,
+        "colore": "Nero/Azzurro",
+        "tipo_carburante": "Benzina",
+        "cavalli": 800,
+        "cambio": "Automatico",
+        "targa": "EG824TH",
+        "immagine_url": "https://cdn.motor1.com/images/mgl/Oo3xke/s3/mansory-p9lm-evo-900-porsche-911-turbo-s.jpg"
+      }
+    ]
+  }
+  
