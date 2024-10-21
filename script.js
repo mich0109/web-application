@@ -44,6 +44,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
 // Funzione per mostrare i dettagli della macchina
 function mostraDettagli(macchina) {
+  
     document.getElementById('dettagli-macchina').style.display = 'block';
     const dettagli = `
         <strong>Marca:</strong> ${macchina.marca}<br>
@@ -54,6 +55,7 @@ function mostraDettagli(macchina) {
         <strong>Cavalli:</strong> ${macchina.cavalli}<br>
         <strong>Tipo di cambio:</strong> ${macchina.cambio}<br>
         <strong>Targa:</strong> ${macchina.targa}<br>
+        <strong>Foto:</strong> ${macchina.immagine_url}<br>
     `;
     document.getElementById('dettaglio').innerHTML = dettagli;
 }
