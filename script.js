@@ -24,25 +24,42 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
       document.getElementById("loginMessage").innerHTML = "<span class='text-success'>Login effettuato con successo!</span>";
       // Reindirizzamento alla nuova pagina
       location.href = "webApp.html";
-    } 
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch('macchine.json')
-        .then(response => response.json())
-        .then(data => {
-            const menuMacchine = document.getElementById('menu-macchine');
-            menuMacchine.innerHTML = data.macchine.map(macchina => `
-                <div class="macchina" onclick="mostraDettagli(${JSON.stringify(macchina)})">
-                    <img src="${macchina.immagine_url}" alt="${macchina.marca} ${macchina.modello}" style="cursor: pointer;">
-                    <p>${macchina.marca} ${macchina.modello}</p>
-                </div>
-            `).join('');
-        })
-        .catch(error => console.error('Errore nel caricamento del file JSON:', error));
+    } else {
+      alert("Email o password errate");
+  }
 });
 
-// Funzione per mostrare i dettagli della macchina
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('macchine.json')
+      .then(response => response.json())
+      .then(data => {
+          if (data && data.macchine) {
+              riempiMenu(data.macchine); 
+          } else {
+              console.error("Il file JSON non contiene l'array 'macchine'");
+          }
+      })
+      .catch(error => console.error("Errore:", error));
+});
+
+function riempiMenu(macchine) {
+  let buffer = "";
+
+  let macchineID = document.getElementById("macchine");
+  macchineID.innerHTML = "";
+
+  for (let i = 0; i < macchine.length; i++) {
+    buffer += `
+    <div class="col-4" onclick="mostraDettagli(${JSON.stringify(macchine[i])})">
+        <img src="${macchine[i].immagine_url}" alt="${macchine[i].marca} ${macchine[i].modello}">
+        <h4 class="mb"><span class="bold">${macchine[i].marca} ${macchine[i].modello}</span></h4>
+    </div>
+`;
+  }
+
+  macchineID.innerHTML += buffer;
+}
+
 function mostraDettagli(macchina) {
   
     document.getElementById('dettagli-macchina').style.display = 'block';
@@ -55,12 +72,11 @@ function mostraDettagli(macchina) {
         <strong>Cavalli:</strong> ${macchina.cavalli}<br>
         <strong>Tipo di cambio:</strong> ${macchina.cambio}<br>
         <strong>Targa:</strong> ${macchina.targa}<br>
-        <strong>Foto:</strong> ${macchina.immagine_url}<br>
     `;
     document.getElementById('dettaglio').innerHTML = dettagli;
 }
 
-// Funzione per tornare al menu delle macchine
+
 function tornaAlMenu() {
     document.getElementById('dettagli-macchina').style.display = 'none';
 }

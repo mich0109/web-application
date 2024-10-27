@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concessionario Auto</title>
     <link rel="stylesheet" href="style.css"> 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>ciao</h1>
+        <h1>Concessionario Santantonio</h1>
     </header>
     <main>
-      
-            <h2>Dettagli Macchina</h2>
-            <p id="dettaglio"></p>
-            <button onclick="tornaAlMenu()">Torna al menu</button>
-        </div>
+       <div class="menu" id="macchine">
+       </div>
+       <div id="dettagli-macchina" class="dettagli" style="display: none;">
+        <h2>Dettagli della Macchina</h2>
+        <div id="dettaglio"></div> 
+        <button onclick="tornaAlMenu()">Torna al menu</button>
+    </div>
     </main>
 </body>
 </html>

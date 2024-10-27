@@ -9,7 +9,7 @@
         "cavalli": 75,  
         "cambio": "Manuale",  
         "targa": "EM502LA",  
-        "immagine_url": "toyota_yaris.webp"
+        "immagine_url": "immagini/toyota_yaris.webp"
       },
       {
         "marca": "Honda",
@@ -20,7 +20,7 @@
         "cavalli": 120,
         "cambio": "Manuale",
         "targa": "FB783UJ",
-        "immagine_url": "Honda_civic.webp"
+        "immagine_url": "immagini/Honda_civic.webp"
       },
       {
         "marca": "Tesla",
@@ -31,7 +31,7 @@
         "cavalli": 670,
         "cambio": "Automatico",
         "targa": "CT529GT",
-        "immagine_url": "Tesla_model_S.jpeg"
+        "immagine_url": "immagini/Tesla_model_S.jpeg"
       },
       {
         "marca": "Ford",
@@ -42,7 +42,7 @@
         "cavalli": 90,
         "cambio": "Manuale",
         "targa": "GA650AA",
-        "immagine_url": "ford_fiesta.jpg"
+        "immagine_url": "immagini/ford_fiesta.jpg"
       },
       {
         "marca": "BMW",
@@ -53,7 +53,7 @@
         "cavalli": 394,
         "cambio": "Automatico",
         "targa": "BT826MI",
-        "immagine_url": "Bmw_x5.png"
+        "immagine_url": "immagini/Bmw_x5.png"
       },
       {
         "marca": "Audi",
@@ -64,7 +64,7 @@
         "cavalli": 150,
         "cambio": "Automatico",
         "targa": "DR634UT",
-        "immagine_url": "Audi_a4.jpg"
+        "immagine_url": "immagini/Audi_a4.jpg"
       },
       {
         "marca": "Mercedes-Benz",
@@ -75,7 +75,7 @@
         "cavalli": 204,
         "cambio": "Automatico",
         "targa": "GE759FC",
-        "immagine_url": "Mercedes_classe_c.webp"
+        "immagine_url": "immagini/Mercedes_classe_c.webp"
       },
       {
         "marca": "Volkswagen",
@@ -86,7 +86,7 @@
         "cavalli": 110,
         "cambio": "Manuale",
         "targa": "CR489HY",
-        "immagine_url": "golf.webp"
+        "immagine_url": "immagini/golf.webp"
       },
       {
         "marca": "Range Rover",
@@ -97,7 +97,7 @@
         "cavalli": 400,
         "cambio": "Semi-Automatico",
         "targa": "DH347IJ",
-        "immagine_url": "range_sport.avif"
+        "immagine_url": "immagini/range_sport.avif"
       },
       {
         "marca": "Peugeot",
@@ -108,7 +108,7 @@
         "cavalli": 95,
         "cambio": "Manuale",
         "targa": "FC458GT",
-        "immagine_url": "Peugeot208.avif"
+        "immagine_url": "immagini/Peugeot208.avif"
       },
       {
         "marca": "Porsche",
@@ -119,10 +119,11 @@
         "cavalli": 800,
         "cambio": "Automatico",
         "targa": "EG824TH",
-        "immagine_url": "porsche911.jpg"
+        "immagine_url": "immagini/porsche911.jpg"
       }
     ]
-  }
+}
 
-  function mostraMacchine()
+
+
   

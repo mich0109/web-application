@@ -11,34 +11,36 @@ header {
     color: white;
 }
 
-.car-menu {
+.menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
 }
-
-.macchina {
-    margin: 10px;
-    text-align: center;
+ 
+.col-4 {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
 }
 
-.macchina img {
+ img {
     width: 150px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.car-details {
+.dettagli {
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-  .card {
-    border-radius: 15px;
-  }
   
   .btn-primary {
     background-color: #007bff;
