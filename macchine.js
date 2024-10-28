@@ -9,6 +9,7 @@
             "cavalli": 75,
             "cambio": "Manuale",
             "targa": "EM502LA",
+            "prezzo": "15.000 €",
             "immagine_url": "immagini/toyota_yaris.webp"
         },
         {
@@ -20,6 +21,7 @@
             "cavalli": 120,
             "cambio": "Manuale",
             "targa": "FB783UJ",
+            "prezzo": "16.799 €",
             "immagine_url": "immagini/Honda_civic.webp"
         },
         {
@@ -31,6 +33,7 @@
             "cavalli": 670,
             "cambio": "Automatico",
             "targa": "CT529GT",
+            "prezzo": "31.200 €",
             "immagine_url": "immagini/Tesla_model_S.jpeg"
         },
         {
@@ -42,6 +45,7 @@
             "cavalli": 90,
             "cambio": "Manuale",
             "targa": "GA650AA",
+            "prezzo": "12.000 €",
             "immagine_url": "immagini/ford_fiesta.jpg"
         },
         {
@@ -53,6 +57,7 @@
             "cavalli": 394,
             "cambio": "Automatico",
             "targa": "BT826MI",
+            "prezzo": "45.300 €",
             "immagine_url": "immagini/Bmw_x5.png"
         },
         {
@@ -64,6 +69,7 @@
             "cavalli": 150,
             "cambio": "Automatico",
             "targa": "DR634UT",
+            "prezzo": "28.000 €",
             "immagine_url": "immagini/Audi_a4.jpg"
         },
         {
@@ -75,6 +81,7 @@
             "cavalli": 204,
             "cambio": "Automatico",
             "targa": "GE759FC",
+            "prezzo": "37.000 €",
             "immagine_url": "immagini/Mercedes_classe_c.webp"
         },
         {
@@ -86,6 +93,7 @@
             "cavalli": 110,
             "cambio": "Manuale",
             "targa": "CR489HY",
+            "prezzo": "11.400 €",
             "immagine_url": "immagini/golf.webp"
         },
         {
@@ -97,6 +105,7 @@
             "cavalli": 400,
             "cambio": "Semi-Automatico",
             "targa": "DH347IJ",
+            "prezzo": "23.000 €",
             "immagine_url": "immagini/range_sport.avif"
         },
         {
@@ -108,6 +117,7 @@
             "cavalli": 95,
             "cambio": "Manuale",
             "targa": "FC458GT",
+            "prezzo": "17.000 €",
             "immagine_url": "immagini/Peugeot208.avif"
         },
         {
@@ -119,46 +129,55 @@
             "cavalli": 800,
             "cambio": "Automatico",
             "targa": "EG824TH",
+            "prezzo": "111.000 €",
             "immagine_url": "immagini/porsche911.jpg"
         }
     ]
 
 
-let buffer = "";
+document.addEventListener("DOMContentLoaded", () => {
+    riempiMenu(macchine);
+});
 
-let macchineID = document.getElementById("macchine");
-macchineID.innerHTML = "";
+function riempiMenu(macchine) {
+    let buffer = "";
+    const macchineID = document.getElementById("macchine");
+    macchineID.innerHTML = "";
 
-for (let i = 0; i < macchine.length; i++) {
-    buffer += `
-      <div class="col-4" onclick="mostraDettagli(${JSON.stringify(macchine[i])})">
-          <img src="${macchine[i].immagine_url}">
-          <h4 class="mb"><span class="bold">${macchine[i].marca} ${macchine[i].modello}</span></h4>
-      </div>
-  `;
+    for (let i = 0; i < macchine.length; i++) {
+        buffer += `
+            <div class="col-4" data-index="${i}">
+                <img src="${macchine[i].immagine_url}">
+                <h4 class="mb"><span class="bold">${macchine[i].marca} ${macchine[i].modello}</span></h4>
+            </div>
+        `;
+    }
+
+    macchineID.innerHTML = buffer;
+
+    document.querySelectorAll('.col-4').forEach((element, index) => {
+        element.addEventListener('click', () => mostraDettagli(macchine[index]));
+    });
 }
 
-
-macchineID.innerHTML += buffer;
-
-
-function mostraDettagli(macchine) {
-
-    document.getElementById('dettagli-macchina').style.display = 'block';
+function mostraDettagli(macchina) {
+    const modale = document.getElementById('modale-dettagli');
+    modale.style.display = 'block';
     const dettagli = `
-          <strong>Marca:</strong> ${macchine.marca}<br>
-          <strong>Modello:</strong> ${macchine.modello}<br>
-          <strong>Anno:</strong> ${macchine.anno}<br>
-          <strong>Colore:</strong> ${macchine.colore}<br>
-          <strong>Tipo di carburante:</strong> ${macchine.tipo_carburante}<br>
-          <strong>Cavalli:</strong> ${macchine.cavalli}<br>
-          <strong>Tipo di cambio:</strong> ${macchine.cambio}<br>
-          <strong>Targa:</strong> ${macchine.targa}<br>
-      `;
+        <div class="dettaglio-item"><span class="dettaglio-label">Marca:</span> ${macchina.marca}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Modello:</span> ${macchina.modello}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Anno:</span> ${macchina.anno}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Colore:</span> ${macchina.colore}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Tipo di carburante:</span> ${macchina.tipo_carburante}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Cavalli:</span> ${macchina.cavalli}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Tipo di cambio:</span> ${macchina.cambio}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Targa:</span> ${macchina.targa}</div>
+        <div class="dettaglio-item"><span class="dettaglio-label">Prezzo:</span> ${macchina.prezzo}</div>
+    `;
     document.getElementById('dettaglio').innerHTML = dettagli;
 }
 
 
-function tornaAlMenu() {
-    document.getElementById('dettagli-macchina').style.display = 'none';
+function chiudiModale() {
+    document.getElementById('modale-dettagli').style.display = 'none';
 }

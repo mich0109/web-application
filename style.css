@@ -52,3 +52,64 @@ header {
       width: 30%;
   }
 }
+
+.dettaglio-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.dettaglio-label {
+  font-weight: bold;
+  color: #333;
+  width: 150px;
+}
+
+.modale {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modale-contenuto {
+  position: relative;
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chiudi-modale {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chiudi-modale:hover {
+  color: red;
+  box-shadow: 0 2px 2px rgba(255, 0, 0, 1);
+}
+
+.dettaglio-item {
+  transition: box-shadow 0.3s ease; 
+}
+
+.dettaglio-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+  background-color: rgba(240, 240, 240, 0.5); 
+  cursor: pointer; 
+}
+
+
